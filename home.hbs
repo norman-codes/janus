@@ -1,0 +1,28 @@
+{{!< default}}
+
+<main id="home-main">
+    {{!-- Featured posts section --}}
+    <section id="home-featured">
+        {{#if @custom.show_featured_posts}}
+            {{> "featured"}}
+        {{/if}}
+    </section>
+
+    {{!-- Latest blog and podcast section --}}
+    <section id="home-latest">
+        <div class="latest-blog-posts">
+            <h2>Latest Blog Posts</h2>
+            <!-- Latest blog posts will go here -->
+        </div>
+        <div class="latest-podcasts">
+            <h2>Latest Podcasts</h2>
+            <!-- Latest podcast episodes will go here -->
+        </div>
+    </section>
+
+    {{!-- Exploration by category section --}}
+    <section id="home-categories">
+        <h2>Explore by Category</h2>
+        {{!-- Categories in "topic-minimal" style will go here --}}
+    </section>
+</main>
