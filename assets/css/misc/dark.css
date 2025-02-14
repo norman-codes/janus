@@ -61,11 +61,14 @@
 }
 
 .dark-mode .comment-container,
-.dark-mode .u-placeholder,
 .dark-mode pre,
 .dark-mode :not(pre) > code,
 .dark-mode .kg-header-card.kg-style-light {
     background-color: var(--dark-mode-darker-bg-color);
+}
+
+.dark-mode .u-placeholder {
+    background-color: transparent;
 }
 
 .dark-mode .gh-head,

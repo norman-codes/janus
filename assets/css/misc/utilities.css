@@ -10,7 +10,7 @@
 .u-placeholder {
     position: relative;
     z-index: 10;
-    background-color: var(--light-gray-color);
+    background-color: transparent;
 }
 
 .u-placeholder::before {

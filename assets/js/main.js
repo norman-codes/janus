@@ -38,10 +38,16 @@ function carousel() {
             nav = carousel.find('.owl-prev, .owl-next');
         }
         nav.css({
-            // This line dynamically calculates the height of the nav buttons
-            // based on the image height and an integer offset
-            // (to compensate the padding of the card)
-            top: ((imageHeight / 2) + 40) + 'px',
+            /*
+                This line dynamically calculates the height of the nav buttons
+                based on the image height and an integer offset
+                to compensate the padding of the card.
+                
+                See ".carousel-item" class and its padding attribute.
+                That value is multiplied by 2 since padding is applied from all sides
+                (top and bottom being the relevant ones in this case).
+            */
+            top: ((imageHeight / 2) + 32) + 'px',
             opacity: 1,
         });
     }
@@ -70,7 +76,7 @@ function carousel() {
             512: {
                 items: 2,
             },
-            768: {
+            792: {
                 items: 3,
             },
             1080: {
