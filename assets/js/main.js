@@ -43,9 +43,11 @@ function carousel() {
         });
     }
 
+    // See documentation below for more configuration options:
+    // https://owlcarousel2.github.io/OwlCarousel2/docs/api-options.html
     carousel.owlCarousel({
         dots: false,
-        margin: 28,
+        margin: 32,
         nav: true,
         navText: [
             '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="22" height="22" fill="currentColor"><path d="M20.547 22.107l-6.107-6.107 6.107-6.12-1.88-1.88-8 8 8 8 1.88-1.893z"></path></svg>',

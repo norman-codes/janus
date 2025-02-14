@@ -46,8 +46,7 @@
                 "type": "select",
                 "options": [
                     "Logo on the left",
-                    "Logo in the middle",
-                    "Stacked"
+                    "Logo in the middle"
                 ],
                 "default": "Logo on the left"
             },
