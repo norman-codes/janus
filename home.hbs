@@ -1,19 +1,6 @@
 {{!< default}}
 
 <main id="home-main">
-    {{!-- Featured posts section --}}
-    <section class="home-featured gh-outer">
-        {{!-- If the featured post carousel has been specified in the theme settings --}}
-        {{#if @custom.show_featured_posts}}
-            <h2 class="gh-inner">Featured Posts</h2>
-            {{!-- Get all posts that are featured and include tags in the response --}}
-            {{#get "posts" filter="featured:true" limit="all" include="tags"}}
-                {{!-- Render each post in a responsive carousel --}}
-                {{> "carousel"}}
-            {{/get}}
-        {{/if}}
-    </section>
-
     {{!-- Latest blog and podcast section --}}
     <section class="home-latest gh-outer">
         <div class="gh-inner">
@@ -29,6 +16,19 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    {{!-- Featured posts section --}}
+    <section class="home-featured gh-outer">
+        {{!-- If the featured post carousel has been specified in the theme settings --}}
+        {{#if @custom.show_featured_posts}}
+            <h2 class="gh-inner">Featured Posts</h2>
+            {{!-- Get all posts that are featured and include tags in the response --}}
+            {{#get "posts" filter="featured:true" limit="all" include="tags"}}
+                {{!-- Render each post in a responsive carousel --}}
+                {{> "carousel"}}
+            {{/get}}
+        {{/if}}
     </section>
 
     {{!-- Exploration by category (i.e. tag) section --}}

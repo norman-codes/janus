@@ -7,9 +7,31 @@
     </header>
 
     <div class="gh-topic-content">
-        {{#get "posts" include="tags,authors" filter="tag:{{slug}}" limit="5"}}
+        {{#get "posts" include="tags,authors" filter="tag:{{slug}}" limit="4"}}
             {{#foreach posts}}
-                {{> "loop-minimal"}}
+                {{!-- Latest post container --}}
+                {{#if @first}}
+                    <div class="gh-latest-post">
+                        {{!-- Placeholder for now --}}
+                    </div>
+                {{/if}}
+
+                <article class="gh-card">
+                    <a class="gh-card-link" href="{{url}}">
+                        <h3 class="gh-card-title">{{title}}</h3>
+                    </a>
+                    {{!--
+                        TODO: refactor to accomplish the following:
+                        - latest post is on the left and has a great big box for the image
+                        - other posts are on the right in a list format
+                        - each post has:
+                            - title
+                            - excerpt
+                            - feature image (if available)
+                            - date published
+                            - estimated reading time
+                    --}}
+                </article>
             {{/foreach}}
         {{/get}}
     </div>

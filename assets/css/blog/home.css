@@ -7,15 +7,9 @@
 
 .gh-topic-list {
     display: grid;
-    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    grid-template-columns: repeat(1, minmax(280px, 1fr));
     gap: 80px 48px;
     margin-top: 40px;
-}
-
-@media (max-width: 768px) {
-    .gh-topic-list {
-        grid-template-columns: repeat(1, minmax(200px, 1fr)); /* Reduce the minimum column width */
-    }
 }
 
 .gh-topic-header {
