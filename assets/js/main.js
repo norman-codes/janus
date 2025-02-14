@@ -38,7 +38,10 @@ function carousel() {
             nav = carousel.find('.owl-prev, .owl-next');
         }
         nav.css({
-            top: imageHeight / 2 + 'px',
+            // This line dynamically calculates the height of the nav buttons
+            // based on the image height and an integer offset
+            // (to compensate the padding of the card)
+            top: ((imageHeight / 2) + 40) + 'px',
             opacity: 1,
         });
     }
@@ -64,13 +67,13 @@ function carousel() {
             0: {
                 items: 1,
             },
-            384: {
+            512: {
                 items: 2,
             },
             768: {
                 items: 3,
             },
-            992: {
+            1080: {
                 items: 4,
             },
         },

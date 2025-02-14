@@ -28,3 +28,20 @@
         margin-bottom: 0;
     }
 }
+
+.carousel-item {
+    padding: 16px;
+    background-color: rgba(199, 199, 199, 0.219);
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.carousel-item:hover {
+    /* transform: scale(1.05); */
+    /* Raise the card vertically a little bit on hover */
+    transform: translateY(-8px);
+}
+
+.carousel-item-image {
+    border-radius: 4px;
+}
