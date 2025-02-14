@@ -62,6 +62,9 @@ function carousel() {
             0: {
                 items: 1,
             },
+            384: {
+                items: 2,
+            },
             768: {
                 items: 3,
             },
