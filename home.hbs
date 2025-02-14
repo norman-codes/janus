@@ -3,9 +3,12 @@
 <main id="home-main">
     {{!-- Featured posts section --}}
     <section class="home-featured gh-outer">
+        {{!-- If the featured post carousel has been specified in the theme settings --}}
         {{#if @custom.show_featured_posts}}
             <h2 class="gh-inner">Featured Posts</h2>
+            {{!-- Get all posts that are featured and include tags in the response --}}
             {{#get "posts" filter="featured:true" limit="all" include="tags"}}
+                {{!-- Render each post in a responsive carousel --}}
                 {{> "carousel"}}
             {{/get}}
         {{/if}}
@@ -34,6 +37,14 @@
             <h2>Explore by Category</h2>
             <div class="gh-inner">
                     {{!-- Categories in "topic-minimal" style will go here --}}
+                    {{!-- Get all tags except for blog and podcast --}}
+                    {{#get "tags" filter='slug:-blog+slug:-podcast' include="count.posts" order="count.posts desc"}}
+                        <div class="gh-topic-list">
+                            {{#foreach tags}}
+                                {{> "topic-minimal"}}
+                            {{/foreach}}
+                        </div>
+                    {{/get}}
             </div>
         </div>
     </section>
