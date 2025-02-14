@@ -89,7 +89,8 @@ function carousel() {
 
 /*
   Obtains all instances of "truncate-this-text"
-  and truncates them to 50 characters via lodash's truncate function.
+  and truncates them to 50 characters (to the nearest word)
+  via lodash's truncate function.
   
   See documentation here: https://lodash.info/doc/truncate
 */
