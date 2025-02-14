@@ -4,7 +4,9 @@
     {{!-- Featured posts section --}}
     <section id="home-featured">
         {{#if @custom.show_featured_posts}}
-            {{> "featured"}}
+            {{#get "posts" filter="featured:true" limit="all" include="tags"}}
+                {{> "carousel"}}
+            {{/get}}
         {{/if}}
     </section>
 
