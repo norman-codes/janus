@@ -97,7 +97,7 @@ function truncate_text() {
     const excerpts = document.querySelectorAll('.truncate-this-text');
     excerpts.forEach(excerpt => {
       const excerptText = excerpt.textContent;
-      const truncatedExcerpt = _.truncate(excerptText, { 'length': 50 });
+      const truncatedExcerpt = _.truncate(excerptText, { 'length': 50, 'separator': /,? +/ });
       excerpt.textContent = truncatedExcerpt;
     });
 }
