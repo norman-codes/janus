@@ -32,7 +32,7 @@
 .post-header {
     display: flex;
     flex-direction: column-reverse;
-    gap: 10px;
+    gap: 8px;
 }
 
 .post-title {

@@ -4,6 +4,7 @@ $(function () {
     applyDarkMode();
     darkModeToggle();
     carousel();
+    truncate_text();
 });
 
 function applyDarkMode() {
@@ -83,5 +84,20 @@ function carousel() {
                 items: 4,
             },
         },
+    });
+}
+
+/*
+  Obtains all instances of "truncate-this-text"
+  and truncates them to 50 characters via lodash's truncate function.
+  
+  See documentation here: https://lodash.info/doc/truncate
+*/
+function truncate_text() {
+    const excerpts = document.querySelectorAll('.truncate-this-text');
+    excerpts.forEach(excerpt => {
+      const excerptText = excerpt.textContent;
+      const truncatedExcerpt = _.truncate(excerptText, { 'length': 50 });
+      excerpt.textContent = truncatedExcerpt;
     });
 }
