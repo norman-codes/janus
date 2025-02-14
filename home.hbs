@@ -4,7 +4,7 @@
     {{!-- Featured posts section --}}
     <section class="home-featured gh-outer">
         {{#if @custom.show_featured_posts}}
-            <h2>Featured Posts</h2>
+            <h2 class="gh-inner">Featured Posts</h2>
             {{#get "posts" filter="featured:true" limit="all" include="tags"}}
                 {{> "carousel"}}
             {{/get}}
@@ -13,25 +13,28 @@
 
     {{!-- Latest blog and podcast section --}}
     <section class="home-latest gh-outer">
-        <h2>Latest Content</h2>
-        <div class="latest-content">
-            <div class="latest-blog gh-inner">
-                <h2>Latest Blog Post</h2>
-                <!-- Latest blog posts will go here -->
-            </div>
-            <div class="latest-podcasts gh-inner">
-                <h2>Latest Podcast</h2>
-                <!-- Latest podcast episodes will go here -->
+        <div class="gh-inner">
+            <h2>Latest Content</h2>
+            <div class="latest-content">
+                <div class="latest-blog">
+                    <h2>Latest Blog Post</h2>
+                    <!-- Latest blog posts will go here -->
+                </div>
+                <div class="latest-podcasts">
+                    <h2>Latest Podcast</h2>
+                    <!-- Latest podcast episodes will go here -->
+                </div>
             </div>
         </div>
     </section>
 
     {{!-- Exploration by category (i.e. tag) section --}}
     <section class="home-categories gh-outer">
-        <h2>Explore by Category</h2>
         <div class="gh-inner">
-            {{!-- Placeholder --}}
+            <h2>Explore by Category</h2>
+            <div class="gh-inner">
+                    {{!-- Categories in "topic-minimal" style will go here --}}
+            </div>
         </div>
-        {{!-- Categories in "topic-minimal" style will go here --}}
     </section>
 </main>
