@@ -37,17 +37,15 @@
         <div class="gh-inner">
             {{!-- TODO: MAKE THIS TEXT A CUSTOM VARIABLE --}}
             <h2>explore by topic</h2>
-            <div class="gh-inner">
-                    {{!-- Categories in "topic-minimal" style will go here --}}
-                    {{!-- Get all tags except for blog and podcast --}}
-                    {{#get "tags" filter='slug:-blog+slug:-podcast' include="count.posts" order="count.posts desc"}}
-                        <div class="gh-topic-list">
-                            {{#foreach tags}}
-                                {{> "topic-exploration"}}
-                            {{/foreach}}
-                        </div>
-                    {{/get}}
-            </div>
+            {{!-- Categories in "topic-minimal" style will go here --}}
+            {{!-- Get all tags except for blog and podcast --}}
+            {{#get "tags" filter='slug:-blog+slug:-podcast' include="count.posts" order="count.posts desc"}}
+                <div class="gh-topic-list">
+                    {{#foreach tags}}
+                        {{> "topic-exploration"}}
+                    {{/foreach}}
+                </div>
+            {{/get}}
         </div>
     </section>
 </main>
