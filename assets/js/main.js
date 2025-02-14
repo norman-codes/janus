@@ -7,8 +7,8 @@ $(function () {
 });
 
 function applyDarkMode() {
-    // Check if 'alto_dark' is set to true in localStorage and add the dark-mode class if it is
-    if (localStorage.getItem('alto_dark') === 'true') {
+    // Check if 'janus_dark' is set to true in localStorage and add the dark-mode class if it is
+    if (localStorage.getItem('janus_dark') === 'true') {
         html.addClass('dark-mode');
     }
 }
@@ -20,9 +20,9 @@ function darkModeToggle() {
         
         // Update localStorage with the current state of dark mode
         if (html.hasClass('dark-mode')) {
-            localStorage.setItem('alto_dark', true);
+            localStorage.setItem('janus_dark', true);
         } else {
-            localStorage.setItem('alto_dark', false);
+            localStorage.setItem('janus_dark', false);
         }
     });
 }
