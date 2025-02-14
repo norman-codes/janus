@@ -88,11 +88,18 @@ function carousel() {
 }
 
 /*
-  Obtains all instances of "truncate-this-text"
-  and truncates them to 50 characters (to the nearest word)
-  via lodash's truncate function.
-  
-  See documentation here: https://lodash.info/doc/truncate
+    Obtains all instances of "truncate-this-text"
+    and truncates them to 50 characters (to the nearest word)
+    via lodash's truncate function.
+    - See documentation here: https://lodash.info/doc/truncate
+
+    Why like this instead of using Ghost's built-in truncation?
+    
+    Because it doesn't unfortunately work for custom excerpts,
+    as per the documentation here: https://ghost.org/docs/themes/helpers/excerpt/.
+     
+    Also, CSS truncation only works well for single-line text, as per:
+    https://stackoverflow.com/questions/33058004/applying-an-ellipsis-to-multiline-text.
 */
 function truncate_text() {
     const excerpts = document.querySelectorAll('.truncate-this-text');
