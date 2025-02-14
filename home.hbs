@@ -4,7 +4,7 @@
     {{!-- Latest blog and podcast section --}}
     <section class="home-latest gh-outer">
         <div class="gh-inner">
-            <h2>Latest Content</h2>
+            <h2>fresh off the press!</h2>
             <div class="latest-content">
                 <div class="latest-blog">
                     <h2>Latest Blog Post</h2>
@@ -22,7 +22,8 @@
     <section class="home-featured gh-outer">
         {{!-- If the featured post carousel has been specified in the theme settings --}}
         {{#if @custom.show_featured_posts}}
-            <h2 class="gh-inner">Featured Posts</h2>
+            {{!-- TODO: MAKE TEXT A CUSTOM VARIABLE --}}
+            <h2 class="gh-inner">featured posts</h2> 
             {{!-- Get all posts that are featured and include tags in the response --}}
             {{#get "posts" filter="featured:true" limit="all" include="tags"}}
                 {{!-- Render each post in a responsive carousel --}}
@@ -31,17 +32,18 @@
         {{/if}}
     </section>
 
-    {{!-- Exploration by category (i.e. tag) section --}}
-    <section class="home-categories gh-outer">
+    {{!-- Exploration by topic (i.e. tag) section --}}
+    <section class="home-topics gh-outer">
         <div class="gh-inner">
-            <h2>Explore by Category</h2>
+            {{!-- TODO: MAKE THIS TEXT A CUSTOM VARIABLE --}}
+            <h2>explore by topic</h2>
             <div class="gh-inner">
                     {{!-- Categories in "topic-minimal" style will go here --}}
                     {{!-- Get all tags except for blog and podcast --}}
                     {{#get "tags" filter='slug:-blog+slug:-podcast' include="count.posts" order="count.posts desc"}}
                         <div class="gh-topic-list">
                             {{#foreach tags}}
-                                {{> "topic-minimal"}}
+                                {{> "topic-exploration"}}
                             {{/foreach}}
                         </div>
                     {{/get}}
