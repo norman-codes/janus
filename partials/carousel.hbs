@@ -23,6 +23,9 @@
                     <span class="post-meta-item post-meta-date">
                         <time datetime="{{date format=" YYYY-MM-DD"}}">{{date published_at format="DD MMM YYYY"}}</time>
                     </span>
+                    {{#if reading_time}}
+                    <span class="post-meta-item post-meta-length">{{reading_time}}</span>
+                    {{/if}}
                 </div>
             </header>
         </article>
