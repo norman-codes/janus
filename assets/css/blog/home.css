@@ -142,10 +142,6 @@
     flex-direction: row;
 }
 
-.topic-showcase .topic-name {
-    flex: 0 0 25%;
-}
-
 .topic-showcase .topic-description {
     width: 100%;
     display: flex;
