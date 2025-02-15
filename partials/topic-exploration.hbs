@@ -7,22 +7,23 @@ TAGNAME                  short description of the tag
 
  --}}
 <section class="gh-topic gh-topic-grid">
-    <div class="topic-content">
-        {{!-- Display the tag name and description --}}
-        <div class="topic-showcase">
-            <div class="topic-name">
-                <a href="{{url}}"><h2>{{name}}</h2></a>
-            </div>
-
-            {{#if description}}
-                <div class="topic-description">
-                    <p>{{description}}</p>
-                </div>
-            {{/if}}
+    
+    {{!-- Display the tag name and description --}}
+    <div class="topic-showcase">
+        <div class="topic-name">
+            <a href="{{url}}"><h2>{{name}}</h2></a>
         </div>
 
-        {{!-- Get the 5 latest posts from this tag and display them as cards --}}
-        {{#get "posts" include="tags,authors" filter="tag:{{slug}}" limit="5"}}
+        {{#if description}}
+            <div class="topic-description">
+                <p>{{description}}</p>
+            </div>
+        {{/if}}
+    </div>
+
+    <div class="topic-content">
+        {{!-- Get the 6 latest posts from this tag and display them as cards --}}
+        {{#get "posts" include="tags,authors" filter="tag:{{slug}}" limit="6"}}
             <div class="topic-posts">
                 {{#foreach posts}}
                     {{> 'topic-card'}}
