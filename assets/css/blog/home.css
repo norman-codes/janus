@@ -140,6 +140,7 @@
 .topic-showcase {
     display: flex;
     flex-direction: row;
+    gap: 24px;  /* Space between topic name and description in the event either is long */
 }
 
 .topic-showcase .topic-description {
@@ -147,6 +148,14 @@
     display: flex;
     justify-content: right;
     align-items: flex-end;
+    /* Truncation in the event the description exceeds the container's width */
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.topic-showcase .topic-description p {
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .topic-posts {
