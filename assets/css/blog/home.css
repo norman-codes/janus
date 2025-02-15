@@ -7,14 +7,6 @@
 
 /* Styles specific to grid style sections */
 
-.gh-topic-grid {
-    /* Rounded corners, semi-transparent dark background */
-    background-color: #9696961a;
-    border-radius: 8px;
-    /* Pushing content inside uniformly a little bit */
-    padding: 36px;
-}
-
 .gh-topic-grid .gh-topic-name {
     margin-top: 16px;
     font-size: 2.4rem;
@@ -22,45 +14,21 @@
     letter-spacing: -0.01em;
 }
 
-.gh-topic-grid .gh-topic-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px 40px;
-}
-
-body:not(.home-template) .gh-topic-grid .gh-topic-content {
-    row-gap: 48px;
-    justify-items: center;
-}
-
-.gh-topic-footer {
-    padding-top: 20px;
-    margin-top: 48px;
-    text-align: right;
-    border-top: 1px solid var(--color-light-gray);
-}
-
-.gh-topic-grid .gh-card.large,
-body:not(.home-template) .gh-topic-grid .gh-card {
-    grid-column: 1 / 3;
-}
-
+/* For a card that IS large in the topic grid */
 .gh-topic-grid .gh-card.large {
-    width: 100%;
+    background-color: hsla(0,0%,78%,.219);
+    border-radius: 6px;
 }
 
-.gh-topic-grid .gh-card:not(.large) {
-    width: 100%;
-    max-width: 720px;
-}
+/* For a card that is NOT large in the topic grid */
+/* .gh-topic-grid .gh-card:not(.large) {
 
-.gh-topic-grid .gh-card:not(:only-child).large {
-    padding-bottom: 48px;
-    margin-bottom: 16px;
-    border-bottom: 1px solid var(--color-light-gray);
-    margin-top: 16px;
-    padding-top: 48px;
-    border-top: 1px solid var(--color-light-gray);
+} */
+
+.gh-card-link-large {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .gh-topic-grid .gh-card-link {
