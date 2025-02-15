@@ -22,8 +22,6 @@
     <section class="home-featured gh-outer">
         {{!-- If the featured post carousel has been specified in the theme settings --}}
         {{#if @custom.show_featured_posts}}
-            {{!-- TODO: MAKE TEXT A CUSTOM VARIABLE --}}
-            <h2 class="gh-inner">featured posts</h2> 
             {{!-- Get all posts that are featured and include tags in the response --}}
             {{#get "posts" filter="featured:true" limit="all" include="tags"}}
                 {{!-- Render each post in a responsive carousel --}}
@@ -35,8 +33,6 @@
     {{!-- Exploration by topic (i.e. tag) section --}}
     <section class="home-topics gh-outer">
         <div class="gh-inner">
-            {{!-- TODO: MAKE THIS TEXT A CUSTOM VARIABLE --}}
-            <h2>explore by topic</h2>
             {{!-- Categories in "topic-minimal" style will go here --}}
             {{!-- Get all tags except for blog and podcast --}}
             {{#get "tags" filter='slug:-blog+slug:-podcast' include="count.posts" order="count.posts desc"}}
