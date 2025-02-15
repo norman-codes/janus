@@ -19,16 +19,16 @@
     </section>
 
     {{!-- Featured posts section --}}
-    <section class="home-featured gh-outer">
+    {{#if @custom.show_featured_posts}}
+        <section class="home-featured gh-outer">
         {{!-- If the featured post carousel has been specified in the theme settings --}}
-        {{#if @custom.show_featured_posts}}
             {{!-- Get all posts that are featured and include tags in the response --}}
             {{#get "posts" filter="featured:true" limit="all" include="tags"}}
                 {{!-- Render each post in a responsive carousel --}}
                 {{> "carousel"}}
             {{/get}}
-        {{/if}}
-    </section>
+        </section>
+    {{/if}}
 
     {{!-- Exploration by topic (i.e. tag) section --}}
     <section class="home-topics gh-outer">
