@@ -37,7 +37,6 @@
 }
 
 .carousel-item:hover {
-    /* transform: scale(1.05); */
     /* Raise the card vertically a little bit on hover */
     transform: translateY(-8px);
 }

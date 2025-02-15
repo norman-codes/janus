@@ -14,6 +14,14 @@
     letter-spacing: -0.01em;
 }
 
+.gh-card {
+    transition: transform 0.2s;
+}
+
+.gh-card:hover {
+    transform: scale(1.02);
+}
+
 .gh-topic-grid .gh-card-link {
     display: flex;
     gap: 24px;
@@ -69,7 +77,7 @@
 
 .gh-card-footer {
     margin-top: 12px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 500;
     color: var(--color-secondary-text);
     text-transform: uppercase;
@@ -91,50 +99,22 @@
     transform: translateY(-3px);
 }
 
-/* Styles specific to list style sections */
-
 .gh-topic-list {
-    display: grid;
-    grid-template-columns: repeat(1, minmax(280px, 1fr));
-    gap: 80px 48px;
-    margin-top: 40px;
-}
-
-.gh-topic-header {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 12px;
-    margin-bottom: 24px;
-    border-bottom: 1px solid var(--color-light-gray);
+    flex-direction: column;
+    gap: 30px;
 }
 
-.gh-topic-header .gh-topic-name {
-    font-size: 2rem;
-    letter-spacing: -0.015em;
+.gh-topic-footer {
+    display: flex;
+    justify-content: right;
 }
 
-.gh-topic-header .gh-topic-link {
+.gh-topic-footer .gh-topic-link {
     color: var(--color-secondary-text);
 }
 
-.gh-topic-minimal .gh-card-title {
-    font-size: 1.6rem;
-    font-weight: 400;
-    line-height: 1.6;
-    letter-spacing: -0.01em;
-    word-break: break-word;
-}
-
-.gh-topic-minimal .gh-card + .gh-card {
-    margin-top: 16px;
-}
-
-/* Global elements used for both grid and list style sections */
-
 .gh-topic-link {
-    display: inline-flex;
-    align-items: center;
     font-weight: 600;
     letter-spacing: -0.011em;
 }
@@ -149,16 +129,25 @@
     display: flex;
     flex-direction: row;
     gap: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 12px;
+    border-top: 1px solid var(--color-light-gray);
+    border-bottom: 1px solid var(--color-light-gray);
 }
 
 .topic-showcase {
     flex: 0 0 24%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 
 .topic-posts {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 24px;
 }
 
 /* Making the topic exploration vertical/columnar on smaller screens */

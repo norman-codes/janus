@@ -1,30 +1,28 @@
-{{!--
-    TODO: refactor to accomplish the following:
-    - area on the left contains the category and its description
-    - area on the right contains the latest posts in a list format as cards, with:
-        - title
-        - excerpt
-        - feature image (if available)
-        - date published
-        - estimated reading time
---}}
+{{!-- TODO: Move the tag name and description into the header
+
+The result should be something like this:
+
+TAGNAME                  short description of the tag
+=====================================================
+
+ --}}
 <section class="gh-topic gh-topic-grid">
     <div class="topic-content">
         {{!-- Display the tag name and description --}}
         <div class="topic-showcase">
-            <h2 class="topic-name">
-                <a href="{{url}}">{{name}}</a>
-            </h2>
-            <span class="topic-description">
-                <p>{{description}}</p>
-            </span>
-            <header class="gh-topic-header">
-                    <a class="gh-topic-link" href="{{url}}">More {{> "icons/arrow-right"}}</a>
-            </header>
+            <div class="topic-name">
+                <a href="{{url}}"><h2>{{name}}</h2></a>
+            </div>
+
+            {{#if description}}
+                <div class="topic-description">
+                    <p>{{description}}</p>
+                </div>
+            {{/if}}
         </div>
 
-        {{!-- Get the 6 latest posts from this tag --}}
-        {{#get "posts" include="tags,authors" filter="tag:{{slug}}" limit="6"}}
+        {{!-- Get the 5 latest posts from this tag and display them as cards --}}
+        {{#get "posts" include="tags,authors" filter="tag:{{slug}}" limit="5"}}
             <div class="topic-posts">
                 {{#foreach posts}}
                     {{> 'topic-card'}}
@@ -32,4 +30,7 @@
             </div>
         {{/get}}
     </div>
+    <footer class="gh-topic-footer">
+            <a class="gh-topic-link" href="{{url}}">More {{> "icons/arrow-right"}}</a>
+    </footer>
 </section>
