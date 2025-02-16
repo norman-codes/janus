@@ -66,9 +66,6 @@
                 ],
                 "default": "Modern sans-serif"
             },
-            "white_logo_for_dark_mode": {
-                "type": "image"
-            },
             "show_featured_posts": {
                 "type": "boolean",
                 "default": true,
@@ -84,9 +81,12 @@
                 "default": true,
                 "group": "post"
             },
-            "dark_mode_bg": {
+            "dark_mode_background_color": {
                 "type": "color",
                 "default": "#282c35"
+            },
+            "white_logo_for_dark_mode": {
+                "type": "image"
             }
         }
     },
