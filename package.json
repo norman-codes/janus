@@ -1,7 +1,7 @@
 {
     "name": "janus",
     "description": "A blog and podcast theme for Ghost",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "private": true,
     "engines": {
         "ghost": ">=5.0.0"
@@ -83,6 +83,10 @@
                 "type": "boolean",
                 "default": true,
                 "group": "post"
+            },
+            "dark_mode_bg": {
+                "type": "color",
+                "default": "#282c35"
             }
         }
     },
