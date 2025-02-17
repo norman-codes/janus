@@ -31,9 +31,12 @@
 
 .carousel-item {
     padding: 16px;
-    background-color: rgba(199, 199, 199, 0.219);
     border-radius: 8px;
     transition: transform 0.2s;
+    border-style: solid;
+    border-width: 2px;
+    /* EXPERIMENT WITH BOX SHADOW PROPERTY, COLOR, AND HOVER ANIMATION */
+    box-shadow: 6px 6px;
 }
 
 .carousel-item:hover {
