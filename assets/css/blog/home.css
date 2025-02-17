@@ -175,7 +175,7 @@
     .topic-showcase {
         flex-direction: column;
         flex: 1; /* Allow the latest content to take full width */
-        justify-items: center;
+        justify-items: left;
         gap: 8px;
         margin-bottom: 8px;
     }
@@ -183,11 +183,11 @@
     .topic-showcase .topic-name {
         display: flex;
         flex: 0 0 auto; /* Allow the topic name to take full width on smaller screens */
-        justify-content: center;
+        justify-content: left;
     }
 
     .topic-showcase .topic-description {
-        justify-content: center;
+        justify-content: left;
     }
 
     .topic-posts {
