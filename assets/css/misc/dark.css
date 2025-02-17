@@ -108,9 +108,9 @@
 }
 
 .dark-mode .carousel-item {
-    box-shadow: 0 0px 2px rgba(255,255,255,0.3);
+    box-shadow: 0 0px 2px rgba(255,255,255,0.4);
 }
 
 .dark-mode .carousel-item:after {
-    box-shadow: 0 5px 15px rgba(200,200,200,0.1);
+    box-shadow: 0 5px 15px rgba(200,200,200,0.2);
 }
