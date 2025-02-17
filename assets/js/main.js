@@ -43,8 +43,13 @@ function darkModeToggle() {
             performance implications in the post page and beyond.
         */
         $('#ghost-comments-root iframe').each(function() {
+            // Reference: https://stackoverflow.com/questions/4249809/reload-an-iframe-with-jquery
+            /*
+                Note that this causes a "Source map error" because, briefly,
+                the iframe is loading from an invalid URL (as it is effectively
+                being "reset" by the code below).
+            */
             var srcdoc = $(this).attr('srcdoc');
-            $(this).attr('srcdoc', '');
             $(this).attr('srcdoc', srcdoc);
         });
     });
