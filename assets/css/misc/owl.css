@@ -9,7 +9,7 @@
 .owl .owl-stage {
     position: relative;
     touch-action: pan-Y;
-    padding-top: 8px; /* Matching the vertical translation on hover; see blog/featured.css */ 
+    padding-top: 16px; /* Matching the vertical translation on hover; see blog/featured.css */ 
     padding-bottom: 8px;
 }
 

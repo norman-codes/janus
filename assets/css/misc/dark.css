@@ -106,3 +106,11 @@
     color: var(--white-color) !important;
     opacity: 1;
 }
+
+.dark-mode .carousel-item {
+    box-shadow: 0 0px 2px rgba(255,255,255,0.3);
+}
+
+.dark-mode .carousel-item:after {
+    box-shadow: 0 5px 15px rgba(200,200,200,0.1);
+}

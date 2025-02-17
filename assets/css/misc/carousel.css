@@ -29,19 +29,40 @@
     }
 }
 
+/* Carousel item hover animation written with reference to:
+https://tobiasahlin.com/blog/how-to-animate-box-shadow/ */
+
 .carousel-item {
     padding: 16px;
-    border-radius: 2px;
     transition: transform 0.2s;
-    border-style: solid;
-    border-width: 2px;
-    /* EXPERIMENT WITH BOX SHADOW PROPERTY, COLOR, AND HOVER ANIMATION */
-    box-shadow: 6px 6px;
+    box-shadow: 0 0px 2px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.carousel-item:after {
+    content: "";
+    border-radius: 8px;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .carousel-item:hover {
-    /* Raise the card vertically a little bit on hover */
+    -webkit-transform: translateY(-8px);
     transform: translateY(-8px);
+  }
+  
+.carousel-item:hover::after {
+    opacity: 1;
 }
 
 .carousel-item-image {
