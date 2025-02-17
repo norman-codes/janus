@@ -132,8 +132,14 @@ function carousel() {
 function truncate_text() {
     const excerpts = document.querySelectorAll('.truncate-this-text');
     excerpts.forEach(excerpt => {
-      const excerptText = excerpt.textContent;
-      const truncatedExcerpt = _.truncate(excerptText, { 'length': 50, 'separator': /,? +/ });
-      excerpt.textContent = truncatedExcerpt;
+        // Get the custom truncation length from data attribute or default to 50 if not specified
+        const customLength = excerpt.getAttribute('truncate-to') || 50;
+        
+        // Convert the custom length to a number
+        const truncateLength = parseInt(customLength, 10);
+        
+        const excerptText = excerpt.textContent;
+        const truncatedExcerpt = _.truncate(excerptText, { 'length': truncateLength, 'separator': /,? +/ });
+        excerpt.textContent = truncatedExcerpt;
     });
 }
