@@ -117,8 +117,9 @@ function carousel() {
 
 /*
     Obtains all instances of "truncate-this-text"
-    and truncates them to 50 characters (to the nearest word)
-    via lodash's truncate function.
+    and truncates them to the number of characters provided by the
+    "truncate-to" data attribute, or 50 by default, (to the nearest
+    word) via lodash's truncate function.
     - See documentation here: https://lodash.info/doc/truncate
 
     Why like this instead of using Ghost's built-in truncation?
