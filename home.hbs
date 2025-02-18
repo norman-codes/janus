@@ -3,32 +3,25 @@
 <main id="home-main">
     {{!-- Hero section, featuring image, prompt to subscribe (for those not subscribed),
     links, etc. --}}
-    <section class="home-latest gh-outer">
-        <div class="gh-inner">
-            <h2>fresh off the press!</h2>
-            {{!-- Latest blog and podcast section --}}
-            <div class="latest-content">
-                <div class="latest-blog">
-                    <h2>Latest Blog Post</h2>
-                    <!-- Latest blog posts will go here -->
-                </div>
-                <div class="latest-podcasts">
-                    <h2>Latest Podcast</h2>
-                    <!-- Latest podcast episodes will go here -->
+
+
+    {{!-- Latest posts section --}}
+    {{#if @custom.highlight_latest_posts}}
+        <section class="home-latest gh-outer">
+            <div class="gh-inner">
+                <h2>fresh off the press!</h2>
+                {{!-- Latest blog and podcast section --}}
+                <div class="latest-content">
+                    <div class="latest-blog">
+                        <h2>Latest Blog Post</h2>
+                        <!-- Latest blog posts will go here -->
+                    </div>
+                    <div class="latest-podcasts">
+                        <h2>Latest Podcast</h2>
+                        <!-- Latest podcast episodes will go here -->
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    {{!-- Featured posts section --}}
-    {{#if @custom.show_featured_posts}}
-        <section class="home-featured gh-outer">
-        {{!-- If the featured post carousel has been specified in the theme settings --}}
-            {{!-- Get all posts that are featured and include tags in the response --}}
-            {{#get "posts" filter="featured:true" limit="all" include="tags"}}
-                {{!-- Render each post in a responsive carousel --}}
-                {{> "carousel"}}
-            {{/get}}
         </section>
     {{/if}}
 

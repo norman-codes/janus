@@ -1,3 +1,4 @@
+{{!-- TODO: Make display of non-primary tag in 'post-meta' optional --}}
 <div class="carousel-container carousel owl gh-inner">
     {{#foreach posts}}
         <div class="carousel-item">
@@ -31,12 +32,6 @@
                         {{#if reading_time}}
                             <span class="post-meta-item post-meta-length">{{reading_time}}</span>
                         {{/if}}
-                        {{!-- Display non-primary tag(s) --}}
-                        {{#foreach tags from='2'}}
-                            <span class="post-meta-item post-meta-non-primary-tag">
-                                {{name}}
-                            </span>                            
-                        {{/foreach}}
                     </div>
                     {{!-- Display (truncated) post excerpt --}}
                     {{#if excerpt}}

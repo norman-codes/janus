@@ -1,11 +1,3 @@
-{{!-- TODO: Move the tag name and description into the header
-
-The result should be something like this:
-
-TAGNAME                  short description of the tag
-=====================================================
-
- --}}
 <section class="gh-topic gh-topic-grid">
     
     {{!-- Display the tag name and description --}}
@@ -20,10 +12,17 @@ TAGNAME                  short description of the tag
             </div>
         {{/if}}
     </div>
+    
+    {{!-- Get the featured posts from this tag and display them in a carousel --}}
+    <div class="topic-carousel">
+        {{#get "posts" include="tags,authors" filter="tag:{{slug}}+featured:true" limit="6"}}
+            {{> 'carousel'}}
+        {{/get}}
+    </div>
 
+    {{!-- Get the 4 latest posts from this tag and display them as cards --}}
     <div class="topic-content">
-        {{!-- Get the 6 latest posts from this tag and display them as cards --}}
-        {{#get "posts" include="tags,authors" filter="tag:{{slug}}" limit="6"}}
+        {{#get "posts" include="tags,authors" filter="tag:{{slug}}" limit="4"}}
             <div class="topic-posts">
                 {{#foreach posts}}
                     {{> 'topic-card'}}
@@ -31,6 +30,8 @@ TAGNAME                  short description of the tag
             </div>
         {{/get}}
     </div>
+
+
     <footer class="gh-topic-footer">
             <a class="gh-topic-link" href="{{url}}">More {{> "icons/arrow-right"}}</a>
     </footer>
