@@ -1,10 +1,12 @@
 {{!< default}}
 
 <main id="home-main">
-    {{!-- Latest blog and podcast section --}}
+    {{!-- Hero section, featuring image, prompt to subscribe (for those not subscribed),
+    links, etc. --}}
     <section class="home-latest gh-outer">
         <div class="gh-inner">
             <h2>fresh off the press!</h2>
+            {{!-- Latest blog and podcast section --}}
             <div class="latest-content">
                 <div class="latest-blog">
                     <h2>Latest Blog Post</h2>
@@ -35,6 +37,7 @@
         <div class="gh-inner">
             {{!-- Categories in "topic-minimal" style will go here --}}
             {{!-- Get all tags except for blog and podcast --}}
+            {{!-- TODO: MAKE THESE TAGS A CUSTOM SETTING --}}
             {{#get "tags" filter='slug:-blog+slug:-podcast' include="count.posts" order="count.posts desc"}}
                 <div class="gh-topic-list">
                     {{#foreach tags}}

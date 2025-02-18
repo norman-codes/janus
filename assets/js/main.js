@@ -5,6 +5,7 @@ $(function () {
     darkModeToggle();
     carousel();
     truncate_text();
+    init_toc();
 });
 
 function applyDarkMode() {
@@ -142,5 +143,25 @@ function truncate_text() {
         const excerptText = excerpt.textContent;
         const truncatedExcerpt = _.truncate(excerptText, { 'length': truncateLength, 'separator': /,? +/ });
         excerpt.textContent = truncatedExcerpt;
+    });
+}
+
+/* 
+    Initializes the table of contents (Tocbot) object.
+
+    See relevant documentation here:
+    - https://tscanlin.github.io/tocbot/#usage
+    - https://ghost.org/tutorials/adding-table-of-contents/
+*/
+function init_toc() {
+    tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.gh-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.gh-content',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3, h4',
+        // Ensure correct positioning
+        hasInnerContainers: true,
     });
 }

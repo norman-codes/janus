@@ -11,7 +11,9 @@
 @import "blog/author.css";
 @import "blog/related.css";
 @import "blog/home.css";
+@import "blog/toc.css";
 @import "misc/owl.css";
 @import "misc/carousel.css";
 @import "misc/utilities.css";
 @import "misc/dark.css";
+@import "external/tocbot.css";
