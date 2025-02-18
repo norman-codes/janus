@@ -1,7 +1,7 @@
 {
     "name": "janus",
     "description": "A blog and podcast theme for Ghost",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "private": true,
     "engines": {
         "ghost": ">=5.0.0"
@@ -66,9 +66,8 @@
                 ],
                 "default": "Modern sans-serif"
             },
-            "highlight_latest_posts": {
-                "type": "boolean",
-                "default": true,
+            "tag_slugs_for_content_types": {
+                "type": "text",
                 "group": "homepage"
             },
             "show_author": {

@@ -5,25 +5,20 @@
     links, etc. --}}
 
     {{!-- Latest posts section --}}
-    {{!-- TODO: REPLACE THIS BOOLEAN WITH CSV STRINGS THAT SPECIFY PRIMARY TAGS
-    CORRESPONDING TO FORMS OF CONTENT; e.g., "blog", "podcast", etc. --}}
-    {{#if @custom.highlight_latest_posts}}
+    {{#if @custom.tag_slugs_for_content_types}}
         <section class="home-latest gh-outer">
             <div class="gh-inner">
-                <h2>fresh off the press!</h2>
-                {{!-- Latest blog and podcast section --}}
                 <div class="latest-content">
-                    <div class="latest-blog">
-                        <h2>Latest Blog Post</h2>
-                        <!-- Latest blog posts will go here -->
-                    </div>
-                    <div class="latest-podcasts">
-                        <h2>Latest Podcast</h2>
-                        <!-- Latest podcast episodes will go here -->
-                    </div>
+                    {{#get "tags" filter="slug:[{{@custom.tag_slugs_for_content_types}}]"}}
+                        {{#foreach tags}}
+                            {{> "latest-card"}}
+                        {{/foreach}}
+                    {{/get}}
                 </div>
             </div>
         </section>
+    {{else}}
+        <h2>placeholder</h2>
     {{/if}}
 
     {{!-- Exploration by topic (i.e. tag) section --}}
