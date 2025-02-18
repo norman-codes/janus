@@ -4,12 +4,12 @@
     {{!-- Hero section, featuring image, prompt to subscribe (for those not subscribed),
     links, etc. --}}
 
-    {{!-- Latest posts section --}}
-    {{#if @custom.tag_slugs_for_content_types}}
+    {{!-- Latest posts section for primary tags --}}
+    {{#if @custom.primary_tag_slugs}}
         <section class="home-latest gh-outer">
             <div class="gh-inner">
                 <div class="latest-content">
-                    {{#get "tags" filter="slug:[{{@custom.tag_slugs_for_content_types}}]"}}
+                    {{#get "tags" filter="slug:[{{@custom.primary_tag_slugs}}]"}}
                         {{#foreach tags}}
                             {{> "latest-card"}}
                         {{/foreach}}
@@ -17,23 +17,20 @@
                 </div>
             </div>
         </section>
-    {{else}}
-        <h2>placeholder</h2>
     {{/if}}
 
-    {{!-- Exploration by topic (i.e. tag) section --}}
-    <section class="home-topics gh-outer">
-        <div class="gh-inner">
-            {{!-- Categories in "topic-minimal" style will go here --}}
-            {{!-- Get all tags except for blog and podcast --}}
-            {{!-- TODO: MAKE THESE TAGS A CUSTOM SETTING --}}
-            {{#get "tags" filter='slug:-blog+slug:-podcast' include="count.posts" order="count.posts desc"}}
-                <div class="gh-topic-list">
-                    {{#foreach tags}}
-                        {{> "topic-exploration"}}
-                    {{/foreach}}
-                </div>
-            {{/get}}
-        </div>
-    </section>
+    {{!-- Exploration section for secondary tags --}}
+    {{#if @custom.secondary_tag_slugs}}
+        <section class="home-topics gh-outer">
+            <div class="gh-inner">
+                {{#get "tags" filter="slug:[{{@custom.secondary_tag_slugs}}]"}}
+                    <div class="gh-topic-list">
+                        {{#foreach tags}}
+                            {{> "topic-exploration"}}
+                        {{/foreach}}
+                    </div>
+                {{/get}}
+            </div>
+        </section>
+    {{/if}}
 </main>
