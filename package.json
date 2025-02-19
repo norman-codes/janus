@@ -84,6 +84,10 @@
                 "default": true,
                 "group": "post"
             },
+            "background_color": {
+                "type": "color",
+                "default": "#FFFFFF"
+            },
             "dark_mode_background_color": {
                 "type": "color",
                 "default": "#282c35"

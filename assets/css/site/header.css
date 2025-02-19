@@ -6,3 +6,7 @@
 .gh-head-actions {
     font-weight: 600;
 }
+
+.gh-head {
+    background-color: var(--bg-color);
+}
