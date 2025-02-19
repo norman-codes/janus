@@ -7,6 +7,8 @@
     gap: 5%;
     padding-left: 2.5%;
     padding-right: 2.5%;
+    padding-top: 16px;
+    padding-bottom: 32px;
 }
 
 .latest-card {
@@ -184,15 +186,17 @@
 }
 
 .topic-showcase {
-    display: flex;
-    flex-direction: row;
-    gap: 24px;  /* Space between topic name and description in the event either is long */
+    flex-direction: column;
+    flex: 1; /* Allow the latest content to take full width */
+    justify-items: left;
+    gap: 8px;
+    margin-bottom: 8px;
 }
 
 .topic-showcase .topic-description {
     width: 100%;
     display: flex;
-    justify-content: right;
+    justify-content: left;
     align-items: flex-end;
     /* Truncation in the event the description exceeds the container's width */
     white-space: nowrap;
@@ -218,21 +222,9 @@
         gap: 32px; /* Adjust gap as needed */
     }
 
-    .topic-showcase {
-        flex-direction: column;
-        flex: 1; /* Allow the latest content to take full width */
-        justify-items: left;
-        gap: 8px;
-        margin-bottom: 8px;
-    }
-
     .topic-showcase .topic-name {
         display: flex;
         flex: 0 0 auto; /* Allow the topic name to take full width on smaller screens */
-        justify-content: left;
-    }
-
-    .topic-showcase .topic-description {
         justify-content: left;
     }
 
