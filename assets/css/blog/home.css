@@ -241,12 +241,12 @@ between them 5% */
 }
 
 .topic-showcase {
-    flex-direction: column;
-    flex: 1; /* Allow the latest content to take full width */
-    justify-items: left;
-    gap: 8px;
     margin-bottom: 16px;
     border-bottom: 1px solid var(--color-mid-gray);
+    /* Match the width of the topic title to the padding
+    on the outside of the carousel */
+    margin-left: 28px;
+    margin-right: 28px;
 }
 
 .topic-showcase .topic-description {
