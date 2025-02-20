@@ -8,9 +8,6 @@
 @media (max-width: 768px) {
     .subscription-container {
         width: 75% !important;
-        padding: 24px;
-        border-radius: 8px;
-        background-color: var(--color-lighter-gray);
     }
 }
 
@@ -25,7 +22,7 @@
 .subscription-container {
     width: 40%;
     padding: 24px;
-    border-radius: 8px;
+    border-radius: 24px;
     background-color: var(--color-lighter-gray);
 }
 
