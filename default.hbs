@@ -84,20 +84,39 @@
     </div>
 
     <footer class="gh-foot{{#unless @site.secondary_navigation}} no-menu{{/unless}} gh-outer">
-        <div class="gh-foot-inner gh-inner">
-            <div class="gh-copyright">
-                {{@site.title}} © {{date format="YYYY"}}
-            </div>
-            {{#if @site.secondary_navigation}}
-                <nav class="gh-foot-menu">
-                    {{navigation type="secondary"}}
-                </nav>
+        <div class="gh-inner">
+            {{#if @site.members_enabled}}
+                {{#unless @member}}
+                    <section class="gh-subscribe">
+                        <div class="subscription-container">
+                            {{#if @custom.subscription_title}}
+                                <h3 class="gh-subscribe-title">{{@custom.subscription_title}}</h3>
+                            {{else}}
+                                <h3 class="gh-subscribe-title">Subscribe to {{@site.title}}</h3>
+                            {{/if}}
+                            {{#if @custom.subscription_subtitle}}
+                                <div class="gh-subscribe-description">{{@custom.subscription_subtitle}}</div>
+                            {{/if}}
+                            <button class="gh-subscribe-btn gh-btn gh-primary-btn" data-portal="signup">{{> "icons/rss"}} Subscribe</button>
+                        </div>
+                    </section>
+                {{/unless}}
             {{/if}}
-            <div class="gh-powered-by">
-                <a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
+
+            <div class="gh-foot-inner">
+                <div class="gh-copyright">
+                    {{@site.title}} © {{date format="YYYY"}}
+                </div>
+                {{#if @site.secondary_navigation}}
+                    <nav class="gh-foot-menu">
+                        {{navigation type="secondary"}}
+                    </nav>
+                {{/if}}
+                <div class="gh-powered-by">
+                    <a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
+                </div>
             </div>
         </div>
-        {{!-- TODO: add conditional rendering of subscribe button with text --}}
     </footer>
 
 </div>

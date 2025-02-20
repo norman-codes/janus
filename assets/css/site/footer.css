@@ -1,0 +1,53 @@
+/* Subscription section. Reference: https://github.com/TryGhost/Headline/blob/main/assets/css/screen.css */
+
+.gh-foot {
+    padding-top: 4rem;
+}
+
+.gh-subscribe {
+    margin-top: 32px;
+    margin-bottom: 80px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.subscription-container {
+    justify-content: center;
+    width: 40%;
+    padding: 24px;
+    border-radius: 8px;
+    background-color: var(--color-lighter-gray);
+}
+
+.gh-subscribe-title {
+    font-size: 4.4rem;
+    white-space: break-spaces;
+}
+
+.has-serif-title:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) .gh-subscribe-title {
+    font-family: var(--gh-font-heading, var(--font-serif));
+}
+
+.gh-subscribe-description {
+    margin-top: 8px;
+    font-size: 2rem;
+    white-space: break-spaces;
+}
+
+.has-serif-body:not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-subscribe-description {
+    font-family: var(--gh-font-body, var(--font-serif));
+}
+
+.gh-subscribe-btn {
+    margin-top: 16px;
+    letter-spacing: -0.011em;
+}
+
+.gh-subscribe-btn:hover {
+    opacity: 0.9;
+}
+
+.gh-subscribe-btn svg {
+    margin-right: 6px;
+}

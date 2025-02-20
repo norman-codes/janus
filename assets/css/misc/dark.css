@@ -114,3 +114,7 @@
 .dark-mode .carousel-item:after {
     box-shadow: 0 5px 15px rgba(200,200,200,0.2);
 }
+
+.dark-mode .gh-subscribe {
+    background-color: var(--color-dark-gray);
+}

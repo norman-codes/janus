@@ -102,6 +102,12 @@
             "hero_subtitle": {
                 "type": "text",
                 "group": "homepage"
+            },
+            "subscription_title": {
+                "type": "text"
+            },
+            "subscription_subtitle": {
+                "type": "text"
             }
         }
     },
