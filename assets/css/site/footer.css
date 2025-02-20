@@ -4,6 +4,16 @@
     padding-top: 4rem;
 }
 
+/* Responsiveness adjustments for subscription section */
+@media (max-width: 768px) {
+    .subscription-container {
+        width: 75% !important;
+        padding: 24px;
+        border-radius: 8px;
+        background-color: var(--color-lighter-gray);
+    }
+}
+
 .gh-subscribe {
     margin-top: 32px;
     margin-bottom: 80px;
@@ -13,7 +23,6 @@
 }
 
 .subscription-container {
-    justify-content: center;
     width: 40%;
     padding: 24px;
     border-radius: 8px;
