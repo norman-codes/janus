@@ -94,6 +94,14 @@
             },
             "white_logo_for_dark_mode": {
                 "type": "image"
+            },
+            "hero_title": {
+                "type": "text",
+                "group": "homepage"
+            },
+            "hero_subtitle": {
+                "type": "text",
+                "group": "homepage"
             }
         }
     },

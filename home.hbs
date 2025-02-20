@@ -1,22 +1,33 @@
 {{!< default}}
 
 <main id="home-main">
-    {{!-- Hero section, featuring image, prompt to subscribe (for those not subscribed),
-    links, etc. --}}
+    {{!-- Hero section featuring site title and description with a button prompt to subscribe (for those not subscribed) --}}
     <section class="home-hero gh-outer">
         <div class="gh-inner">
             <div class="hero-content">
                 <div class="hero-text">
-                    {{!-- TODO: Custom variable for text here --}}
-                    <h1>site title</h1>
-                    {{!-- TODO: Custom variable for text here --}}
-                    <p>site description. lorem ipsum dolor sit amet.</p>
+                    {{#unless @custom.hero_title}}
+                        {{!-- Default hero title (site title) --}}
+                        <h1>{{@site.title}}</h1>
+                    {{else}}
+                        {{!-- Custom hero title --}}
+                        <h1>{{@custom.hero_title}}</h1>
+                    {{/unless}}
+                    
+                    {{#unless @custom.hero_subtitle}}
+                        {{!-- Default hero subtitle --}}
+                        <p>Read, watch, listen.</p>
+                    {{else}}
+                        {{!-- Custom hero subtitle  --}}
+                        <p>{{@custom.hero_subtitle}}</p>
+                    {{/unless}}
                 </div>
                 <div class="hero-buttons">
-                    {{!-- Non-member buttons --}}
                     {{#unless @member}}
+                        {{!-- Non-member buttons --}}
                         <a class="gh-head-btn gh-btn gh-primary-btn" href="#/portal/signup" data-portal="signup">Subscribe</a>
                     {{else}}
+                        {{!-- Member buttons --}}
                         <p>placeholder</p>
                     {{/unless}}
                 </div>
