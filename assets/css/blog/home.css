@@ -1,17 +1,30 @@
 /* Hero section */
 .hero-content {
-    text-align: center;
+    display: flex;
     margin-bottom: 24px;
+    height: 25vh;
+    /* Align to center */
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .hero-text h1 {
     /* Massive title */
     font-size: 7.5rem;
+    text-align: center;
 }
 
 .hero-text p {
     /* Large description */
     font-size: 2rem;
+    text-align: center;
+}
+
+.hero-buttons {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: row;
 }
 
 /* Latest section */
