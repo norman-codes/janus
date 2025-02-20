@@ -28,6 +28,7 @@
 .latest-card-title {
     display: flex;
     justify-content: center;
+    padding-bottom: 4px;
 }
 
 .latest-content .gh-card-image {
