@@ -13,7 +13,12 @@
                     <p>site description. lorem ipsum dolor sit amet.</p>
                 </div>
                 <div class="hero-buttons">
-                    <a class="gh-head-btn gh-btn gh-primary-btn" href="#/portal/signup" data-portal="signup">Subscribe</a>
+                    {{!-- Non-member buttons --}}
+                    {{#unless @member}}
+                        <a class="gh-head-btn gh-btn gh-primary-btn" href="#/portal/signup" data-portal="signup">Subscribe</a>
+                    {{else}}
+                        <p>placeholder</p>
+                    {{/unless}}
                 </div>
             </div>
         </div>
