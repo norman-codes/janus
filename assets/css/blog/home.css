@@ -1,14 +1,33 @@
+/* Hero section */
+.hero-content {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.hero-text h1 {
+    /* Massive title */
+    font-size: 7.5rem;
+}
+
+.hero-text p {
+    /* Large description */
+    font-size: 2rem;
+}
+
 /* Latest section */
 
 .latest-content {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 5%;
+    gap: 7.5%;
     padding-left: 2.5%;
     padding-right: 2.5%;
     padding-top: 16px;
-    padding-bottom: 32px;
+    padding-bottom: 16px;
+    border-top: 1px solid var(--color-light-gray);
+    border-bottom: 1px solid var(--color-light-gray);
+    margin-bottom: 16px;
 }
 
 .latest-card {

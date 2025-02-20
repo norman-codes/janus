@@ -3,15 +3,30 @@
 <main id="home-main">
     {{!-- Hero section, featuring image, prompt to subscribe (for those not subscribed),
     links, etc. --}}
+    <section class="home-hero gh-outer">
+        <div class="gh-inner">
+            <div class="hero-content">
+                <div class="hero-text">
+                    {{!-- TODO: Custom variable for text here --}}
+                    <h1>site title</h1>
+                    {{!-- TODO: Custom variable for text here --}}
+                    <p>site description. lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="hero-buttons">
+                    <a class="gh-head-btn gh-btn gh-primary-btn" href="#/portal/signup" data-portal="signup">Subscribe</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     {{!-- Latest posts section for primary tags --}}
     {{#if @custom.primary_tag_slugs}}
         <section class="home-latest gh-outer">
-            {{!-- Custom variable for text here --}}
-            <div class="latest-title">
-                <h2>the latest</h2>
-            </div>
             <div class="gh-inner">
+                {{!-- TODO: Custom variable for text here --}}
+                <div class="latest-title">
+                    <h2>the latest</h2>
+                </div>
                 <div class="latest-content">
                     {{#get "tags" filter="slug:[{{@custom.primary_tag_slugs}}]"}}
                         {{#foreach tags}}
