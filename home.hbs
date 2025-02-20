@@ -7,6 +7,10 @@
     {{!-- Latest posts section for primary tags --}}
     {{#if @custom.primary_tag_slugs}}
         <section class="home-latest gh-outer">
+            {{!-- Custom variable for text here --}}
+            <div class="latest-title">
+                <h2>the latest</h2>
+            </div>
             <div class="gh-inner">
                 <div class="latest-content">
                     {{#get "tags" filter="slug:[{{@custom.primary_tag_slugs}}]"}}

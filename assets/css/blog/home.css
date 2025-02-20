@@ -15,6 +15,16 @@
     max-width: 300px;
 }
 
+.latest-card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.latest-card-text h3 {
+    padding-top: 8px;
+}
+
 .latest-card-title {
     display: flex;
     justify-content: center;
