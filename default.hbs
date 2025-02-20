@@ -88,7 +88,7 @@
             {{#if @site.members_enabled}}
                 {{#unless @member}}
                     <section class="gh-subscribe">
-                        <div class="subscription-container">
+                        <div class="subscription-container{{#is "home"}}-no-border{{/is}}">
                             {{#if @custom.subscription_title}}
                                 <h3 class="gh-subscribe-title">{{@custom.subscription_title}}</h3>
                             {{else}}

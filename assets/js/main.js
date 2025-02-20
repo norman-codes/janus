@@ -76,7 +76,7 @@ function carousel() {
                 That value is multiplied by 2 since padding is applied from all sides
                 (top and bottom being the relevant ones in this case).
             */
-            top: ((imageHeight / 2) + 32) + 'px',
+            top: ((imageHeight / 2) + 112) + 'px',
             opacity: 1,
         });
     }
@@ -86,7 +86,7 @@ function carousel() {
     carousel.owlCarousel({
         dots: false,
         margin: 32,
-        stagePadding: 24,
+        stagePadding: 28,
         nav: true,
         navText: [
             '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="22" height="22" fill="currentColor"><path d="M20.547 22.107l-6.107-6.107 6.107-6.12-1.88-1.88-8 8 8 8 1.88-1.893z"></path></svg>',

@@ -38,8 +38,20 @@
     padding-right: 2.5%;
     padding-top: 16px;
     padding-bottom: 16px;
-    border-top: 1px solid var(--color-light-gray);
     margin-bottom: 32px;
+}
+
+/* If the latest content has THREE modes
+(e.g., blog, podcast, video, then make the gap
+between them 5% */
+.latest-content:has(> :last-child:nth-child(3)) {
+    gap: 5%;
+}
+
+.latest-title {
+    border-bottom: 1px solid var(--color-mid-gray);
+    margin-left: 64px;
+    margin-right: 64px;
 }
 
 .latest-card {
@@ -59,7 +71,8 @@
 .latest-card-title {
     display: flex;
     justify-content: center;
-    padding-bottom: 4px;
+    margin-top: 12px;
+    margin-bottom: 24px;
 }
 
 .latest-content .gh-card-image {
@@ -232,7 +245,8 @@
     flex: 1; /* Allow the latest content to take full width */
     justify-items: left;
     gap: 8px;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--color-mid-gray);
 }
 
 .topic-showcase .topic-description {

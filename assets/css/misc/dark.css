@@ -74,6 +74,7 @@
 .dark-mode .gh-head,
 .dark-mode .off-canvas {
     background-color: var(--dark-mode-bg-color) !important;
+    border-bottom: 1px solid var(--color-dark-gray);
 }
 
 .dark-mode .sep::after {
@@ -108,13 +109,27 @@
 }
 
 .dark-mode .carousel-item {
-    box-shadow: 0 0px 2px rgba(255,255,255,0.4);
+    box-shadow: 0 0px 2px var(--color-lighter-gray);
 }
 
 .dark-mode .carousel-item:after {
-    box-shadow: 0 5px 15px rgba(200,200,200,0.2);
+    box-shadow: 0 5px 15px var(--color-dark-gray);
 }
 
 .dark-mode .subscription-container {
-    background-color: var(--color-dark-gray);
+    background-color: transparent;
+    border: 1px solid var(--color-dark-gray);
+}
+
+.dark-mode .latest-title {
+    border-bottom: 1px solid var(--color-dark-gray);
+}
+
+.dark-mode .topic-showcase {
+    border-bottom: 1px solid var(--color-dark-gray);
+}
+
+.dark-mode .topic-content {
+    border-top: 1px solid var(--color-dark-gray);
+    border-bottom: 1px solid var(--color-dark-gray);
 }
