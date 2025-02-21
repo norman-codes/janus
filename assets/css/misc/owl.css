@@ -44,6 +44,17 @@
     width: 100%;
 }
 
+/* Solves issue of items that should not be 
+visible being visible due to large padding value */
+.owl-item {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.owl-item:not(.active) {
+    opacity: 0;
+}
+
 .owl .owl-nav.disabled,
 .owl .owl-dots.disabled {
     display: none;
@@ -80,18 +91,30 @@
     transition: color 0.5s var(--animation-base), opacity 0.5s var(--animation-base);
 }
 
+/* Adjust nav buttons on either side, for padding */
+.owl .owl-prev {
+    left: 24px;
+}
+
+.owl .owl-next {
+    right: 24px;
+}
+
+
+@media (max-width: 512px) {
+    .owl .owl-prev {
+        left: 16px;
+    }
+    
+    .owl .owl-next {
+        right: 16px;
+    }
+}
+
 .owl .owl-prev.disabled,
 .owl .owl-next.disabled {
     color: var(--secondary-text-color);
     cursor: default;
-}
-
-.owl .owl-prev {
-    left: -20px;
-}
-
-.owl .owl-next {
-    right: -20px;
 }
 
 .owl .owl-dots {
@@ -171,14 +194,4 @@
 
 .owl-height {
     transition: height 500ms ease-in-out;
-}
-
-@media (max-width: 767px) {
-    .owl .owl-prev {
-        left: 10px;
-    }
-
-    .owl .owl-next {
-        right: 10px;
-    }
 }
