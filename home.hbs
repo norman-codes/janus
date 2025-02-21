@@ -39,10 +39,12 @@
     {{#if @custom.primary_tag_slugs}}
         <section class="home-latest gh-outer">
             <div class="gh-inner">
-                {{!-- TODO: Custom variable for text here --}}
-                <div class="latest-title">
-                    <h2>the latest</h2>
-                </div>
+                {{!-- Optionally displaying a title for the latest section, if provided by user --}}
+                {{#if @custom.latest_title}}
+                    <div class="latest-title">
+                        <h2>{{@custom.latest_title}}</h2>
+                    </div>
+                {{/if}}
                 <div class="latest-content">
                     {{#get "tags" filter="slug:[{{@custom.primary_tag_slugs}}]"}}
                         {{#foreach tags}}

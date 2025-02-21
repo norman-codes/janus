@@ -108,6 +108,10 @@
             },
             "subscription_subtitle": {
                 "type": "text"
+            },
+            "latest_title": {
+                "type": "text",
+                "group": "homepage"
             }
         }
     },
