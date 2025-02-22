@@ -42,10 +42,6 @@
     word-break: break-word;
 }
 
-.has-serif-title:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) :where(.post-feed, .single-post) .post-title {
-    font-family: var(--gh-font-heading, var(--font-serif));
-}
-
 .post-meta {
     font-size: 12px;
     font-weight: 600;
