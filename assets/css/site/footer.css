@@ -7,7 +7,11 @@
 /* Responsiveness adjustments for subscription section */
 @media (max-width: 768px) {
     .subscription-container {
-        width: 75% !important;
+        width: 100% !important;
+    }
+
+    .subscription-container-no-border {
+        width: 100% !important;
     }
 }
 
@@ -36,10 +40,6 @@
 .gh-subscribe-title {
     font-size: 4.4rem;
     white-space: break-spaces;
-}
-
-.has-serif-title:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) .gh-subscribe-title {
-    font-family: var(--gh-font-heading, var(--font-serif));
 }
 
 .gh-subscribe-description {

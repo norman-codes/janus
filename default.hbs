@@ -18,12 +18,16 @@
     {{!-- TODO: ADD ALL RELEVANT DARK AND LIGHT MODE SETTINGS --}}
     <style>
         :root {
+            /* Custom dark mode background color */
             {{#if @custom.dark_mode_background_color}}
             --dark-mode-bg-color: {{@custom.dark_mode_background_color}};
             {{/if}}
+            /* Custom (light mode) background color */
             {{#if @custom.background_color}}
             --bg-color: {{@custom.background_color}}
             {{/if}}
+            /* Custom fonts */
+            
         }
     </style>
 

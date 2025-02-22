@@ -96,7 +96,21 @@
             "latest_title": {
                 "type": "text",
                 "group": "homepage"
+            },
+            "decorative_title_font": {
+                "type": "select",
+                "options": ["One", "Two", "Three"],
+                "default": "One"
+            },
+            "heading_font": {
+                "options": ["One", "Two", "Three"],
+                "default": "One"
+            },
+            "body_font": {
+                "options": ["One", "Two", "Three"],
+                "default": "One"
             }
+
         }
     },
     "scripts": {
