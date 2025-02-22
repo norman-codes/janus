@@ -11,6 +11,20 @@
     src: url("../fonts/LoversQuarrel-Regular.ttf");
 }
 
+@font-face {
+    font-family: Cormorant Garamond;
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/CormorantGaramond-Regular.ttf");
+}
+
+@font-face {
+    font-family: Lustria;
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/Lustria-Regular.ttf");
+}
+
 /* Custom font applications */
 body {
     font-family: var(--body-font-family);

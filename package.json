@@ -104,13 +104,13 @@
             },
             "heading_font": {
                 "type": "select",
-                "options": ["One", "Two", "Three"],
-                "default": "One"
+                "options": ["Cormorant Garamond", "Two", "Three"],
+                "default": "Cormorant Garamond"
             },
             "body_font": {
                 "type": "select",
-                "options": ["One", "Two", "Three"],
-                "default": "One"
+                "options": ["Lustria", "Two", "Three"],
+                "default": "Lustria"
             }
 
         }
