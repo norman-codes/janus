@@ -103,10 +103,12 @@
                 "default": "One"
             },
             "heading_font": {
+                "type": "select",
                 "options": ["One", "Two", "Three"],
                 "default": "One"
             },
             "body_font": {
+                "type": "select",
                 "options": ["One", "Two", "Three"],
                 "default": "One"
             }

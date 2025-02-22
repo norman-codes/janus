@@ -53,3 +53,10 @@
     font-weight: 700;
     src: local(""), url("../fonts/lora-v23-latin-700italic.woff2") format("woff2"), url("../fonts/lora-v23-latin-700italic.woff") format("woff");
 }
+
+@font-face {
+    font-family: Lovers Quarrel;
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/LoversQuarrel-Regular.ttf");
+}

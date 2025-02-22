@@ -14,8 +14,7 @@
         }
     </script>
 
-    {{!-- Custom color settings --}}
-    {{!-- TODO: ADD ALL RELEVANT DARK AND LIGHT MODE SETTINGS --}}
+    {{!-- Custom settings --}}
     <style>
         :root {
             /* Custom dark mode background color */
@@ -24,10 +23,12 @@
             {{/if}}
             /* Custom (light mode) background color */
             {{#if @custom.background_color}}
-            --bg-color: {{@custom.background_color}}
+            --bg-color: {{@custom.background_color}};
             {{/if}}
-            /* Custom fonts */
-            
+            /* Setting custom fonts */
+            {{#match @custom.heading_font "=" "Two"}}
+            --heading-font-family: "Lovers Quarrel";
+            {{/match}}
         }
     </style>
 
