@@ -25,6 +25,107 @@
     src: url("../fonts/Lustria-Regular.ttf");
 }
 
+@font-face {
+    font-family: Forum;
+    font-weight: 400;
+    font-style: normal;
+    src: url("../fonts/Forum-Regular.ttf");
+}
+
+@font-face {
+    font-family: Ubuntu;
+    font-weight: 400;
+    font-style: normal;
+    src: url("../fonts/Ubuntu-Regular.ttf");
+}
+
+@font-face {
+    font-family: Martel;
+    font-weight: 400;
+    font-style: normal;
+    src: url("../fonts/Martel-Regular.ttf");
+}
+  
+
+@font-face {
+    font-family: Arima;
+    font-weight: 400;
+    font-style: normal;
+    src: url("../fonts/Arima-Regular.ttf");
+}
+
+@font-face {
+    font-family: Imprima;
+    font-weight: 400;
+    font-style: normal;
+    src: url("../fonts/Imprima-Regular.ttf");
+}
+  
+
+@font-face {
+    font-family: Mulish;
+    font-weight: 400;
+    font-style: normal;
+    src: url("../fonts/Mulish-Regular.ttf");
+}
+
+@font-face {
+    font-family: Norican;
+    font-weight: 400;
+    font-style: normal;
+    src: url("../fonts/Norican-Regular.ttf");
+}
+
+
+@font-face {
+    font-family: Lora;
+    font-weight: 400;
+    font-style: normal;
+    src: url("../fonts/Lora-Regular.ttf");
+}
+
+@font-face {
+    font-family: Hind Madurai;
+    font-weight: 400;
+    font-style: normal;
+    src: url("../fonts/HindMadurai-Regular.ttf");
+}
+
+@font-face {
+    font-family: Miltonian;
+    font-weight: 400;
+    font-style: normal;
+    src: url("../fonts/Miltonian-Regular.ttf");
+}  
+
+@font-face {
+    font-family: Cherry Swash;
+    font-weight: 400;
+    font-style: normal;
+    src: url("../fonts/CherrySwash-Regular.ttf");
+}
+
+@font-face {
+    font-family: Cherry Bomb One;
+    font-weight: 400;
+    font-style: normal;
+    src: url("../fonts/CherryBombOne-Regular.ttf");
+}
+
+@font-face {
+    font-family: Bigelow Rules;
+    font-weight: 400;
+    font-style: normal;
+    src: url("../fonts/BigelowRules-Regular.ttf");
+}
+
+@font-face {
+    font-family: Elsie;
+    font-weight: 400;
+    font-style: normal;
+    src: url("../fonts/Elsie-Regular.ttf");
+}
+
 /* Custom font applications */
 body {
     font-family: var(--body-font-family);
