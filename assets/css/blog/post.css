@@ -52,7 +52,6 @@
 
 .post-meta-item:not(:first-of-type)::before {
     padding: 0 7px 0 4px;
-    font-family: serif;
     content: "/";
 }
 
@@ -63,10 +62,6 @@
 .post-excerpt {
     margin-top: 12px;
     word-break: break-word;
-}
-
-.has-serif-body:not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .post-excerpt {
-    font-family: var(--gh-font-body, var(--font-serif));
 }
 
 @media (max-width: 767px) {

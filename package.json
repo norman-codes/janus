@@ -97,10 +97,10 @@
                 "type": "text",
                 "group": "homepage"
             },
-            "decorative_title_font": {
+            "decorated_font": {
                 "type": "select",
-                "options": ["One", "Two", "Three"],
-                "default": "One"
+                "options": ["Lovers Quarrel", "Two", "Three"],
+                "default": "Lovers Quarrel"
             },
             "heading_font": {
                 "type": "select",

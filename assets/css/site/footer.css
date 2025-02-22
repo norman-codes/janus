@@ -48,10 +48,6 @@
     white-space: break-spaces;
 }
 
-.has-serif-body:not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-subscribe-description {
-    font-family: var(--gh-font-body, var(--font-serif));
-}
-
 .gh-subscribe-btn {
     margin-top: 16px;
     letter-spacing: -0.011em;

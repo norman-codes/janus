@@ -25,10 +25,18 @@
             {{#if @custom.background_color}}
             --bg-color: {{@custom.background_color}};
             {{/if}}
-            /* Setting custom fonts */
-            {{#match @custom.heading_font "=" "Two"}}
-            --heading-font-family: "Lovers Quarrel";
-            {{/match}}
+            /* Setting custom decorated title font */
+            {{#if @custom.decorated_font}}
+            --decorated-font-family: {{@custom.decorated_font}};
+            {{/if}}
+            /* Setting custom heading font */
+            {{#if @custom.heading_font}}
+            --heading-font-family: {{@custom.heading_font}};
+            {{/if}}
+            /* Setting custom body font */
+            {{#if @custom.body_font}}
+            --body-font-family: {{@custom.body_font}};
+            {{/if}}
         }
     </style>
 
