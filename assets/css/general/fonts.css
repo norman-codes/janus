@@ -45,7 +45,6 @@
     font-style: normal;
     src: url("../fonts/Martel-Regular.ttf");
 }
-  
 
 @font-face {
     font-family: Arima;
@@ -60,7 +59,6 @@
     font-style: normal;
     src: url("../fonts/Imprima-Regular.ttf");
 }
-  
 
 @font-face {
     font-family: Mulish;
@@ -75,7 +73,6 @@
     font-style: normal;
     src: url("../fonts/Norican-Regular.ttf");
 }
-
 
 @font-face {
     font-family: Lora;
@@ -106,7 +103,7 @@
 }
 
 @font-face {
-    font-family: Cherry Bomb One;
+    font-family: Cherry Bomb;
     font-weight: 400;
     font-style: normal;
     src: url("../fonts/CherryBombOne-Regular.ttf");

@@ -1,8 +1,7 @@
 /* Hero section */
 .hero-content {
     display: flex;
-    margin-bottom: 24px;
-    height: 25vh;
+    margin-bottom: 16px;
     /* Align to center */
     justify-content: center;
     flex-direction: column;
@@ -11,8 +10,10 @@
 
 .hero-text h1 {
     /* Massive title */
-    font-size: 7.5rem;
+    font-size: 10rem;
     text-align: center;
+    font-weight: normal;
+    margin-bottom: 8px;
 }
 
 .hero-text p {
@@ -22,7 +23,7 @@
 }
 
 .hero-buttons {
-    margin-top: 8px;
+    margin-top: 16px;
     display: flex;
     flex-direction: row;
 }
@@ -36,9 +37,8 @@
     gap: 7.5%;
     padding-left: 2.5%;
     padding-right: 2.5%;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
+    margin-top: 32px;
 }
 
 /* If the latest content has THREE modes

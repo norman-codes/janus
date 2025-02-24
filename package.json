@@ -99,17 +99,17 @@
             },
             "decorated_font": {
                 "type": "select",
-                "options": ["Lovers Quarrel", "Two", "Three"],
+                "options": ["Lovers Quarrel", "Forum", "Arima", "Cherry Swash", "Cherry Bomb", "Miltonian", "Norican", "Bigelow Rules"],
                 "default": "Lovers Quarrel"
             },
             "heading_font": {
                 "type": "select",
-                "options": ["Cormorant Garamond", "Two", "Three"],
+                "options": ["Cormorant Garamond", "Ubuntu", "Imprima", "Lora", "Elsie"],
                 "default": "Cormorant Garamond"
             },
             "body_font": {
                 "type": "select",
-                "options": ["Lustria", "Two", "Three"],
+                "options": ["Lustria", "Martel", "Muli", "Lora"],
                 "default": "Lustria"
             }
 
