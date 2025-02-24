@@ -230,6 +230,10 @@ between them 5% */
     margin-left: 4px;
 }
 
+.gh-card-primary-tag {
+    color: var(--primary-color);
+}
+
 .topic-content {
     display: flex;
     flex-direction: row;
