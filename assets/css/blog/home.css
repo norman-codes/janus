@@ -234,6 +234,10 @@ between them 5% */
     color: var(--primary-color);
 }
 
+.gh-card-primary-tag::before {
+    color: var(--color-secondary-text);
+}
+
 .topic-content {
     display: flex;
     flex-direction: row;
