@@ -14,21 +14,20 @@
                         <h1 class="decorated-font">{{@custom.hero_title}}</h1>
                     {{/unless}}
                     
-                    {{#unless @custom.hero_subtitle}}
-                        {{!-- Default hero subtitle --}}
-                        <p>Read, watch, listen.</p>
-                    {{else}}
+                    {{#if @custom.hero_subtitle}}
                         {{!-- Custom hero subtitle  --}}
                         <p>{{@custom.hero_subtitle}}</p>
-                    {{/unless}}
+                    {{/if}}
                 </div>
-                <div class="hero-buttons">
-                    {{#unless @member}}
+
+                
+                {{!-- <div class="hero-buttons"> --}}
+                    {{!-- {{#unless @member}} --}}
                         {{!-- Non-member buttons --}}
-                        <button class="gh-btn gh-primary-btn" data-portal="signup">{{> "icons/rss"}} Subscribe</button>
+                        {{!-- <button class="gh-btn gh-primary-btn" data-portal="signup">{{> "icons/rss"}} Subscribe</button> --}}
                     {{!-- Use else statement here to add member buttons --}}
-                    {{/unless}}
-                </div>
+                    {{!-- {{/unless}} --}}
+                {{!-- </div> --}}
             </div>
         </div>
     </section>
