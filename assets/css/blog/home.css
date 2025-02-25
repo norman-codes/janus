@@ -254,6 +254,10 @@ between them 5% */
     on the outside of the carousel */
 }
 
+.topic-showcase .topic-name {
+    text-transform: lowercase;
+}
+
 .topic-showcase .topic-description {
     width: 100%;
     display: flex;
