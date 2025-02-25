@@ -172,6 +172,7 @@ between them 5% */
     line-height: 1.3;
     letter-spacing: -0.015em;
     word-break: break-word;
+    margin-bottom: 8px;
 }
 
 .gh-topic-grid .gh-card-excerpt {
