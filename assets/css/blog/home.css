@@ -50,8 +50,6 @@ between them 5% */
 
 .latest-title {
     border-bottom: 1px solid var(--color-mid-gray);
-    margin-left: 64px;
-    margin-right: 64px;
 }
 
 .latest-card {
@@ -254,8 +252,6 @@ between them 5% */
     border-bottom: 1px solid var(--color-mid-gray);
     /* Match the width of the topic title to the padding
     on the outside of the carousel */
-    margin-left: 28px;
-    margin-right: 28px;
 }
 
 .topic-showcase .topic-description {
