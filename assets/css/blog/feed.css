@@ -53,6 +53,8 @@
     text-overflow: ellipsis;
     letter-spacing: 0;
     white-space: nowrap;
+    /* Reference: https://stackoverflow.com/questions/7760193/bottom-few-pixels-of-text-cut-off */
+    line-height: normal;
 }
 
 .feed-right {
