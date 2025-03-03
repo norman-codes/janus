@@ -248,7 +248,7 @@ between them 5% */
     padding: 12px;
     margin-bottom: 12px;
     border-top: 1px solid var(--color-light-gray);
-    border-bottom: 1px solid var(--color-mid-gray);
+    border-bottom: 1px solid var(--color-light-gray);
     align-items: center;
 }
 
@@ -281,6 +281,11 @@ between them 5% */
 .topic-posts {
     display: flex;
     flex-direction: column;
-    width: 80%;
-    gap: 16px; /* Adjust the gap as needed */
+    width: 60%;
+}
+
+@media (max-width: 768px) {
+    .topic-posts {
+        width: 80%;
+    }
 }

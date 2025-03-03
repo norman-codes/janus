@@ -1,0 +1,31 @@
+<article class="feed {{visibility}}">
+
+    <div class="feed-calendar">
+        <div class="feed-calendar-day">
+            {{date published_at format="DD"}}
+        </div>
+        <div class="feed-calendar-month">
+            {{date published_at format="MMM"}}
+        </div>
+    </div>
+
+    <h2 class="feed-title">{{title}}</h2>
+
+    <div class="feed-right">
+        {{!-- Display star if featured --}}
+        {{#featured}}
+            {{> "icons/star"}}
+        {{/featured}}
+
+        {{!-- TODO: add icons for "member only"/similar posts, or perhaps styles of content --}}
+
+        <div class="feed-length">
+            {{reading_time}}
+        </div>
+    </div>
+
+    {{> "icons/chevron-right"}}
+
+    <a class="u-permalink" href="{{url}}" aria-label="{{title}}"></a>
+
+</article>

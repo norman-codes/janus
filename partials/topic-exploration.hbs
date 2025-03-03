@@ -6,29 +6,26 @@
             <a href="{{url}}"><h2>{{name}}</h2></a>
         </div>
     </div>
-    
-    {{!-- Get the featured posts from this tag and display them in a carousel --}}
-    {{!-- TODO: Find an aesthetic way to differentiate these all as featured,
-    probably with an icon of some kind --}}
-    <div class="topic-carousel">
-        {{#get "posts" include="tags,authors" filter="tag:{{slug}}+featured:true" limit="6"}}
-            {{> 'carousel'}}
-        {{/get}}
-    </div>
 
-    {{!-- Get the 4 latest posts from this tag and display them as cards --}}
-    {{!-- TODO: Find an aesthetic way to differentiate these as latest,
-    perhaps by accentuating the dates, or maybe it's fine as it is --}}
-    <div class="topic-content">
-        {{#get "posts" include="tags,authors" filter="tag:{{slug}}" limit="4"}}
-            <div class="topic-posts">
-                {{#foreach posts}}
-                    {{> 'topic-card'}}
-                {{/foreach}}
-            </div>
-        {{/get}}
-    </div>
+    <div class="topic-items">
+        {{!-- Get the featured posts from this tag and display them in a carousel --}}
+        <div class="topic-carousel">
+            {{#get "posts" include="tags,authors" filter="tag:{{slug}}+featured:true" limit="6"}}
+                {{> 'carousel'}}
+            {{/get}}
+        </div>
 
+        {{!-- Get the 4 latest posts from this tag and display them as cards --}}
+        <div class="topic-content">
+            {{#get "posts" include="tags,authors" filter="tag:{{slug}}" limit="4"}}
+                <div class="topic-posts">
+                    {{#foreach posts}}
+                        {{> 'feed'}}
+                    {{/foreach}}
+                </div>
+            {{/get}}
+        </div>
+    </div>
 
     <footer class="gh-topic-footer">
             <a class="gh-topic-link" href="{{url}}">More {{> "icons/arrow-right"}}</a>

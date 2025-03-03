@@ -13,6 +13,7 @@
 @import "blog/related.css";
 @import "blog/home.css";
 @import "blog/toc.css";
+@import "blog/feed.css";
 @import "misc/owl.css";
 @import "misc/carousel.css";
 @import "misc/utilities.css";

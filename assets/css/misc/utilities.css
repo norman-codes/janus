@@ -1,3 +1,14 @@
+/* Reference: https://github.com/TryGhost/Dawn/blob/77ebd8c36f2c325cfda54bdf683720fcf5f9c3b9/assets/css/misc/utils.css#L4 */
+.u-permalink {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 50;
+    outline: none;
+}
+
 .u-object-fit {
     position: absolute;
     top: 0;
